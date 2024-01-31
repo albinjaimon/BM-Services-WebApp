@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f5c645;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: tab;
+  height: 20px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #000000;
+  color: white;
+}
+</style>
+</head>
+
+	<div>
+		
+		<ul>
+            <li><?php // Create a login/logout link:
+            
+            if (is_null($_SESSION['user_id'])){
+                echo '<a href="index.php">Home</a>';
+            }
+
+            if (is_null($_SESSION['user_id'])) {
+	            echo '<a href="login.php">Login</a>';
+            }
+                ?>
+            </li>
+		</ul>
+		</div>
+	
+<!-- Script 12.10 - header.html -->
